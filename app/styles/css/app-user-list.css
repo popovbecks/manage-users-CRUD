@@ -1,0 +1,116 @@
+body {
+  position: relative;
+  font-family: "OpenSans";
+  padding: 0;
+  color: black;
+  background: #EEF0F8 0% 0% no-repeat padding-box!important;
+}
+
+.manage-user-table-container {
+  display: flex;
+  padding: 26px;
+}
+
+.manage-user-table-wrap {
+  width: 60%;
+  margin-right: 25px;
+  position: relative;
+}
+
+.manage-user-table-wrap .button-group {
+  position: absolute;
+  right: 0;
+  top: -40px;
+}
+
+.manage-user-edit-widget-wrap {
+  width: 40%;
+}
+
+.manage-user-table {
+  border-collapse: collapse;
+  background-color: #fff;
+  width: 100%;
+}
+
+.manage-user-table th {
+  text-align: left;
+  font: normal normal bold 13px/16px Helvetica;
+  letter-spacing: 0px;
+  color: #A4A4B5;
+  text-transform: uppercase;
+  height: 56px;
+}
+
+.manage-user-table tr {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.manage-user-table tr td:first-child,
+.manage-user-table tr th:first-child {
+  padding-left: 25px;
+}
+
+.manage-user-table tr td {
+  background: #F4F5F8 0% 0% no-repeat padding-box;
+  height: 56px;
+  cursor: pointer;
+}
+
+.manage-user-table tr.selected-user td {
+  background: #EFF0F4 0% 0% no-repeat padding-box;
+}
+
+.notification-panel-container {
+  display: block;
+  height: 120px;
+  font-size: 13px;
+  padding: 25px;
+}
+
+.error-messages {
+  float: left;
+}
+
+.success-messages {
+  float: right;
+}
+
+.notification-container {
+  border-radius: 6px;
+  height: 56px;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.notification-container .notification-message {
+  padding-left: 26px;
+}
+
+.notification-container.success-type {
+  background: #66BB6A 0% 0% no-repeat padding-box;
+}
+
+.notification-container.error-type {
+  background: #EF7DA0 0% 0% no-repeat padding-box;
+}
+
+.btn.btn-primary {
+  background: #2E8FF0 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 8px #2E8FF029;
+  border-radius: 6px;
+}
+
+.error-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-container .error-message {
+  font-size: 40px;
+}

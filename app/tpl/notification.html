@@ -1,0 +1,8 @@
+<div class="notification-container" ng-class="{
+    'error-type': $ctrl.type === 'error',
+    'success-type': $ctrl.type === 'success'
+}">
+    <div class="notification-message" >
+        <span>{{$ctrl.message}}</span>
+    </div>
+</div>

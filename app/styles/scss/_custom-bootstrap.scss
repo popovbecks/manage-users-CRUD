@@ -1,0 +1,26 @@
+//** Global textual link color.
+$link-color:#323133;
+//** Link hover color set via `darken()` function.
+$link-hover-color: lighten($link-color, 25%) !default;
+
+// Change path for icon bootsrap
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+
+//Tooltip
+$tooltip-bg:      #616161 !default;
+$tooltip-opacity: 1 !default;
+
+$nav-link-hover-bg:none;
+$grid-columns: 60;
+$grid-gutter-width:20px;
+$container-large-desktop: 1220px + $grid-gutter-width;
+//Popover
+$popover-arrow-width : 7px;
+$popover-arrow-outer-width: 8px;
+$popover-arrow-outer-fallback-color: rgba(0, 0, 0, 0.2); // IE8 fallback
+$popover-arrow-outer-color: rgba(0, 0, 0, 0.2);
+
+/*!
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+*/
+@import "_bootstrap.scss";

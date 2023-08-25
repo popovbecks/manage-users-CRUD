@@ -1,0 +1,48 @@
+<div class="manage-user-page-container">
+    <div class="notification-panel-container">
+        <div class="error-messages" ng-show="userList.notification.type === 'error' && userList.notification.isVisible">
+            <notification type="userList.notification.type" message="userList.notification.message"></notification>
+        </div>
+        <div class="success-messages" ng-show="userList.notification.type === 'success' && userList.notification.isVisible">
+            <notification type="userList.notification.type" message="userList.notification.message"></notification>
+        </div>
+    </div>
+    <div class="manage-user-table-container">
+        <div class="manage-user-table-wrap">
+            <div class="button-group">
+                <button type="button" ng-click="userList.openWidget()" class="btn btn-primary">Create User</button>
+            </div>
+            <table class="manage-user-table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Email</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in userList.users"
+                        ng-click="userList.selectUser(user)"
+                        ng-class="{'selected-user': user.isSelected}">
+                        <td>{{user.username}}</td>
+                        <td>{{user.firstName}}</td>
+                        <td>{{user.lastName}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.type}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="manage-user-edit-widget-wrap">
+            <create-edit-widget
+                ng-if="userList.isWidgetVisible"
+                on-close="userList.closeWidget()"
+                on-update="userList.updateUserList({dataFromChild})"
+                on-delete="userList.deleteUser({dataFromChild})"
+                user="userList.selectedUser">
+            </create-edit-widget>
+        </div>
+    </div>
+</div>

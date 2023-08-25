@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appUserList">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>GlobalLogic Bench test</title>
+</head>
+<body>
+<div id="gl-bench-test" class="app"
+     ng-class="{
+          'app-header-fixed':app.settings.headerFixed,
+          'app-aside-fixed':app.settings.asideFixed,
+          'app-aside-folded':app.settings.asideFolded,
+          'container':app.settings.container
+          }"
+     ui-view></div>
+</body>
+</html>
+
