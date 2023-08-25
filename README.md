@@ -1,4 +1,4 @@
-# GL bench_test
+# Test task
 
 ## This repo was created for checking knowledge of a candidate
 
