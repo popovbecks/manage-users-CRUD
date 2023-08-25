@@ -1,7 +1,5 @@
 # Test task
 
-## This repo was created for checking knowledge of a candidate
-
 ## Getting started
 
 For correct work, please install node js version 8.17.0
