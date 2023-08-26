@@ -6,16 +6,12 @@
 
 For correct work, please install node js version 8.17.0
 
-Install JSON Server
-
-```
-npm install -g json-server@0.14.2
 ```
 
 Start JSON Server
 
 ```bash
-json-server --watch ./db/db.accounts.json
+npm run server
 ```
 ## Routes
 
