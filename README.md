@@ -9,7 +9,7 @@ For correct work, please install node js version 8.17.0
 Start JSON Server
 
 ```bash
-npm run server
+npm run start-server
 ```
 ## Routes
 
