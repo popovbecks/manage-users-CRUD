@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="widget-form">
-            <form novalidate name="userForm">
+            <form novalidate name="userForm" ng-if="ctrl.data">
                 <div class="form-group">
                     <label for="username">Username*</label>
                     <input name="username"
@@ -17,8 +17,9 @@
                             required
                             ng-disabled="!!ctrl.data.id"
                             type="text"
-                            username-availability>
-                    <div ng-show="userForm.$submitted || userForm.username.$touched">
+                            username-availability
+                            disable-username-check="!!ctrl.data.id">
+                    <div ng-show="userForm.$submitted && userForm.username.$touched || userForm.username.$touched">
                         <span class="error-message" ng-show="userForm.username.$error.required">Username is required field.</span>
                         <span class="error-message" ng-show="userForm.username.$error.usernameAvailability && !userForm.username.$error.required">Username is not unique.</span>
                     </div>

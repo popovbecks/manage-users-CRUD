@@ -23,8 +23,10 @@ function CreateEditWidgetCtrl($scope) {
     ctrl.onDelete({dataFromChild: ctrl.data.id});
  }
  $scope.$watch("ctrl.user", function () {
-     ctrl.data = ctrl.user ? {...ctrl.user} : ctrl.emptyUserData;
-     debugger
+     ctrl.data = ctrl.user ? {
+      ...ctrl.user,
+      repeatPassword: ctrl.user.password
+   } : ctrl.emptyUserData;
   });
 }
 

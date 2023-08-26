@@ -2,11 +2,13 @@ function usernameAvailability($http, $q) {
   return {
     require: 'ngModel',
     link: function(scope, element, attrs, ngModelCtrl) {
-      ngModelCtrl.$asyncValidators.usernameAvailability = function(modelValue) {
-        if (!modelValue) {
-          return $q.resolve(); // Resolve immediately for empty input
-        }
+      const disableCheck = scope.$eval(attrs.disableUsernameCheck) || false;
 
+      ngModelCtrl.$asyncValidators.usernameAvailability = function(modelValue) {
+        if (!modelValue || disableCheck) {
+          return $q.resolve();
+        }
+        
         return $http.get('http://localhost:3000/users', { params: { username: modelValue } })
           .then(function(response) {
             if (response.data.length) {
